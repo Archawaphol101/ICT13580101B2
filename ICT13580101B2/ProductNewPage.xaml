@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ICT13580101B2.ProductNewPage">
+    <StackLayout
+         VerticalOptions="Center">
+        <Frame
+            Margin="5">
+            <ScrollView>
+                <StackLayout
+                    Margin="20"
+                    Orientation="Vertical">
+                    <Label
+                        x:Name="titleLabel"
+                        TextColor="Blue"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"
+                        Text="สินค้าใหม่" />
+                    <Label
+                        TextColor="Teal"
+                        Margin="0,20,0,0"
+                        Text="ชื่อสินค้า" />
+                    <Entry
+                        Placeholder="ชื่อสินค้า"
+                        Keyboard="Text"
+                        x:Name="nameEntry" />
+                    <Label
+                        TextColor="Teal"
+                        Text="รายละเอียด" />
+                    <Editor
+                        Keyboard="Text"
+                        HeightRequest="100"
+                        x:Name="descriptionEditor"
+                        BackgroundColor="Silver" />
+                    <Label
+                        TextColor="Teal"
+                        Text="หมวดสินค้า" />
+                    <Picker
+                        x:Name="categoryPicker" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout
+                            Grid.Column="0">
+                            <Label
+                                TextColor="Teal"
+                                Text="ราคาสินค้า" />
+                            <Entry
+                                x:Name="productPriceEntry"
+                                Keyboard="Numeric" />
+                        </StackLayout>
+                        <StackLayout
+                            Grid.Column="1">
+                            <Label
+                                TextColor="Teal"
+                                Text="ราคาขาย" />
+                            <Entry
+                                x:Name="sellPriceEntry"
+                                Keyboard="Numeric" />
+                        </StackLayout>
+                    </Grid>
+                    <Label
+                        TextColor="Teal"
+                        Text="สต็อกสินค้า" />
+                    <Entry
+                        x:Name="stockEntry"
+                        Keyboard="Numeric" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button
+                            x:Name="cancelButton"
+                            Text="ยกเลิก"
+                            BackgroundColor="Red"
+                            TextColor="White"
+                            Grid.Column="0" />
+                        <Button
+                            x:Name="saveButton"
+                            Text="บันทึก"
+                            BackgroundColor="Green"
+                            TextColor="White"
+                            Grid.Column="1" />
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </StackLayout>
+</ContentPage>
